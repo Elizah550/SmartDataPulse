@@ -1,2 +1,2 @@
 # Wearables
-Smart wearables and their api to download their data from theri open api
+Smart wearables and their api to download their data from their open api
