@@ -62,4 +62,4 @@ Contact
 If you have any questions or suggestions, feel free to open an issue or contact us at pavandude100@gmail.com.
 
 
-Make sure to replace placeholders such as `Elizah550`, `pavandude100@gmail.com`, and `https://github.com/your-username` with your actual GitHub username and email. Adjust the API endpoint links according to your actual server configuration.
+Make sure to replace placeholders such as `Elizah550`, `pavandude100@gmail.com`, and `https://github.com/Elizah550` with your actual GitHub username and email. Adjust the API endpoint links according to your actual server configuration.
