@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>CureScience</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/SD-Circle-Logo-2Color.jpg' %}">
+    <!-- Custom CSS -->
+    <link href="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/dist/css/style.css"
+        rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Main wrapper -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Header part -->
+        <!-- ============================================================== -->
+        <header class="py-3 " style="background:#25215E;">
+            <div class="container">
+                <!-- Start Header -->
+                <div class="header">
+                    <nav class="navbar navbar-expand-md navbar-light px-0">
+                        <a class="navbar-brand" href="https://www.curescience.org/">
+                            <img src="{% static 'images/CureScience.webp' %}"
+                                alt="logo" style="height: 80%; width: 80%;">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item pr-3">
+                                    <a href="https://www.curescience.org/"
+                                        class="btn btn-custom btn-outline-info btn-lg" style="color: aliceblue;border-color:aliceblue;" target="_blank">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- End Header -->
+            </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Header part -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- Page wrapper part -->
+        <!-- ============================================================== -->
+        <div class="content-wrapper">
+            <!-- ============================================================== -->
+            <!-- Demos part -->
+            <!-- ============================================================== -->
+            <section class="spacer bg-light">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-md-6 order-md-2">
+                      <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+                    </div> -->
+                    <div class="col-md-4 contents">
+                      <div class="row justify-content-center">
+                        <div class="col-md-12">
+                          <div class="form-block">
+                            <div class="mb-4">
+                              <h3 style="color:#202020">Sign Up for <strong>Curescience Studies</strong></h3>
+                              <h4 class="mb-4" style="color:#202020">Please Enter Your Details</h4>
+                            </div>
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                              <div class="form-group first">
+                                <label for="firstname" style="color:#202020">First Name</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname">
+            
+                              </div>
+                              <div class="form-group last mb-4">
+                                <label for="lastname" style="color:#202020">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname">
+                                
+                              </div>
+
+                              <div class="form-group last mb-4">
+                                <h4 class="" style="color:#202020">Select your Wearable :</h4>
+                                <div class="row">
+                                    <h4 class="col-sm" style="color:#202020"><input type="radio" value="Fitbit" class="wear"  name="wearable"> Fitbit</h4>
+                                    <h4 class="col-sm" style="color:#202020"><input type="radio" value="OuraRing" class="wear"  name="wearable"> OuraRing </h4>
+                                    <h4 class="col-sm" style="color:#202020"><input type="radio" value="GoogleFit" class="wear"  name="wearable"> Google Fit</h4>
+			            <h4 class="col-sm" style="color:#202020"><input type="radio" value="Withings" class="wear"  name="wearable"> Withings</h4>
+                                </div>
+                                <div class="alert alert-info showoneditoura" hidden>
+                                  Please make sure you have an Oura account with your OuraRing Linked before proceeding
+                                </div>
+                                <div class="alert alert-info showoneditfitbit" hidden>
+                                  Please make sure you have an Fitbit account with your Fitbit Linked before proceeding
+                                </div>
+                                <div class="alert alert-info showoneditGfit" hidden>
+                                  Please make sure you have an Google Fit account with your Wearable Linked & Synced with Google Fit App before proceeding
+                                </div>
+                                
+                              </div>
+
+                              <div class="form-group last mb-4">
+                                <div class="form-check">
+                                    <h4><input class="form-check-input TnC" type="checkbox" value="" id="TermsandConditions">
+                                    <label style="color:#202020" class="form-check-label" for="TermsandConditions">
+                                      I agree with the <a href="{% url 'toc' %}"> Terms and Conditions </a>
+                                    </label></h4>
+                                  </div>
+                                  <div class="form-check">
+                                    <h4><input class="form-check-input TnC" type="checkbox" value="" id="Privacy">
+                                    <label style="color:#202020" class="form-check-label" for="Privacy">
+                                        I agree with the <a href="{% url 'privacyweb' %}"> Privacy Policy </a>
+                                    </label></h4>
+                                  </div>
+                                
+                              </div>
+            
+                              <input id="submitbutton" type="submit" value="Register" class="btn btn-pill text-white btn-block btn-primary" style="background-color: #00ADC6; border-color: #00ADC6;" disabled>
+                              
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+            </section>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End page wrapperHeader part -->
+        <!-- ============================================================== -->
+        <footer class="text-center p-4"> All Rights Reserved by Curescience </footer>
+    </div>
+</body>
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script
+    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script
+    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/popper.js/dist/umd/popper.min.js"></script>
+<script
+    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+$(".TnC").on("change", function(e){
+    
+  if($("#TermsandConditions").prop('checked') == true && $("#Privacy").prop('checked') == true){
+    console.log("hello")
+    $("#submitbutton").attr("disabled", false);
+  } else {
+    $("#submitbutton").attr("disabled", true);
+  }
+  
+});
+
+
+
+$('.wear').on('change', function() {
+   if ($('input[name=wearable]:checked').val() == "OuraRing")
+   {
+    $(".showoneditoura")[0].hidden = false;
+    $(".showoneditfitbit")[0].hidden = true;
+    $(".showoneditGfit")[0].hidden = true;
+   }
+   else if($('input[name=wearable]:checked').val() == "Fitbit") 
+   {
+    $(".showoneditoura")[0].hidden = true;
+    $(".showoneditfitbit")[0].hidden = false;
+    $(".showoneditGfit")[0].hidden = true;
+   }
+   else if($('input[name=wearable]:checked').val() == "GoogleFit") 
+   {
+    $(".showoneditoura")[0].hidden = true;
+    $(".showoneditfitbit")[0].hidden = true;
+    $(".showoneditGfit")[0].hidden = false;
+   }
+});
+
+</script>
+    
+</html>

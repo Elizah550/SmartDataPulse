@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <style>
+select {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #5cb5c0;
+  border-radius: 80px;
+  background-color: #5cb5c0;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px 10px 10px;
+  padding-left: 20px;
+}
+   </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Rhenix HUB</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/rhenix_logo_blue.jpg' %}">
+    <!-- Custom CSS -->
+    <link href="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/dist/css/style.css"
+        rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  
+
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Main wrapper -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Header part -->
+        <!-- ============================================================== -->
+        <header class="py-3 " style="background:#09909E;">
+            <div class="container">
+                <!-- Start Header -->
+                <div class="header">
+                    <nav class="navbar navbar-expand-md navbar-light px-0">
+                        <a class="navbar-brand" href="https://rhenix.net/login">
+                            <img src="{% static 'images/rhenix_logo_blue.jpg' %}"
+                                alt="logo" style="height: 30%; width: 30%; border-radius: 50%; display:block; margin-left:auto;margin-right: auto;">
+                        </a>
+                    </nav>
+                </div>
+                <!-- End Header -->
+            </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Header part -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- Page wrapper part -->
+        <!-- ============================================================== -->
+        <div class="content-wrapper">
+            <!-- ============================================================== -->
+            <!-- Demos part -->
+            <!-- ============================================================== -->
+            <section class="spacer bg-light">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-md-6 order-md-2">
+                      <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+                    </div> -->
+                    <div class="col-md-4 contents">
+                      <div class="row justify-content-center">
+                        <div class="col-md-12">
+                          <div class="form-block">
+                            <div class="mb-4">
+                              <h3 style="color:#202020; margin: 20px;">Sign up for <strong>Rhenix HUB</strong></h3>
+				   
+                              <h4 class="mb-4" style="color:#202020; margin: 20px;">Please enter your details</h4>
+                            </div>
+				<div class="alert alert-info showoneditfitbit">
+                                  Please make sure you have a respective wearable accounts with your wearable devices linked before proceeding.
+                                </div>
+                            <form action="" method="POST">
+                                {% csrf_token %}
+
+                              <div class="form-group first">
+                                <label for="firstname" style="color:#202020; margin: 10px;">First name</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" style="border: 1px solid #25215E;border-radius: 2px;margin: 10px; width: 350px" required>
+                              </div>
+                              <div class="form-group last mb-4">
+                                <label for="lastname" style="color:#202020; margin: 10px;">Last name</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname" style="border: 1px solid #25215E;border-radius: 2px;margin: 10px; width: 350px" required>
+                                
+                              </div>
+			     <div class="form-group first">
+                                <label for="email" style="color:#202020; margin: 10px;">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" style="border: 1px solid #25215E;border-radius: 2px;margin: 10px; width: 350px" required>
+            
+                              </div>
+  			     <div class="form-group first">
+                                <label for="phone" style="color:#202020; margin: 10px;">Phone number</label>
+                                <input type="text" class="form-control" name="phone" id="phone" maxlength="10" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" style="border: 1px solid #25215E;border-radius: 2px;margin: 10px; width: 350px" required>
+            
+                              </div>
+                              <div class="form-group last mb-4">
+                                <h4 class="" style="color:#202020; margin: 20px;">Select your wearable :</h4>
+
+				<div class= "move">
+  				<select name="wearable" class="form-select">
+    				<option value="Fitbit">Fitbit</option>
+  			        <option value="OuraRing">Oura Ring</option>
+				<option value="GoogleFit">Google Fit</option>
+    				<option value="MI Band">MI Band</option>
+    				<option value="Withings">Withings</option>
+    				<option value="Samsung">Samsung</option>
+				</select> 
+       
+                                </div>
+                              <div class="form-group last mb-4" style= "margin: 20px;">
+                                <div class="form-check">
+                                    <h4><input class="form-check-input TnC" type="checkbox" value="" id="TermsandConditions">
+                                    <label style="color:#202020;" class="form-check-label" for="TermsandConditions">
+                                      I agree with the <a href="{% url 'toc' %}"> Terms and Conditions </a>
+                                    </label></h4>
+                                  </div>
+                                  <div class="form-check">
+                                    <h4><input class="form-check-input TnC" type="checkbox" value="" id="Privacy">
+                                    <label style="color:#202020;" class="form-check-label" for="Privacy">
+                                        I agree with the <a href="{% url 'privacyweb' %}"> Privacy Policy </a>
+                                    </label></h4>
+                                  </div>
+                               
+                            
+                                
+                              </div>
+                                
+                                
+                              </div>
+                              <input id="submitbutton" type="submit" value="Register" class="btn btn-pill text-white btn-block btn-primary" style="background-color: #09909E; border-color: #09909E;margin: 20px; width: 350px" disabled>
+                              
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+            </section>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End page wrapperHeader part -->
+        <!-- ============================================================== -->
+        <footer class="text-center p-4" style="color:DimGray;"> 
+
+	<!-- <div class="row">
+    		<div class="col-sm">
+     		 
+		Lab Address: <br>
+		10225 Barnes Canyon Road, #A207 <br>
+		San Diego, CA 92121 <br>
+		(858) 800 CURE (2873) <br>
+   		 </div>
+   	 	<div class="col-sm">
+    		  
+		EIN: 46-2822493 <br>
+		Email: Info@CureScience.org <br>
+		Phone: (858) 800 CURE (2873) <br>
+		Toll Free: (844) 567 CURE (2873) <br>
+    		</div>
+	  </div>
+          -->
+	<br><br>
+
+	<p> &copy; 2023 Rhenix | Developed by <a href="https://rhenix.net/login" target="_blank" rel="noopener" tabindex="0">Rhenix.net</a> </p></footer>
+    
+	</div>
+</body>
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script
+    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script
+    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/popper.js/dist/umd/popper.min.js"></script>
+<script
+    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+$(".TnC").on("change", function(e){
+    
+  if($("#TermsandConditions").prop('checked') == true && $("#Privacy").prop('checked') == true){
+    console.log("hello")
+    $("#submitbutton").attr("disabled", false);
+  } else {
+    $("#submitbutton").attr("disabled", true);
+  }
+  
+});
+
+
+</script>
+    
+</html>
